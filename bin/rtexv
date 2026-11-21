@@ -1,0 +1,101 @@
+#!/usr/bin/env python3
+"""rtexv: confere e inicia roteiros no formato rtex-vigia. Só usa a biblioteca padrão do Python."""
+import argparse
+import json
+import re
+import shutil
+import sys
+from pathlib import Path
+
+RAIZ = Path(__file__).resolve().parent.parent
+REGRAS = json.loads((RAIZ / 'formato' / 'regras.json').read_text(encoding='utf-8'))
+
+
+def _simples(texto):
+    return re.sub(r'\s+', ' ', str(texto or '')).strip().lower()
+
+
+def _cita_destino(fala, destino):
+    fala = _simples(fala)
+    return _simples(destino) in fala or _simples(destino).replace('.', ' ponto ') in fala
+
+
+def checar(roteiro, destino=None):
+    """Devolve (erros, avisos, medidas). Erro reprova; aviso só chama atenção."""
+    destino = destino or REGRAS['destino_padrao']
+    erros, avisos = [], []
+    blocos = roteiro.get('blocos') if isinstance(roteiro, dict) else None
+    if not isinstance(blocos, list) or not blocos:
+        return ['o roteiro precisa da lista "blocos"'], [], {}
+    for i, b in enumerate(blocos, 1):
+        if not isinstance(b, dict) or not str(b.get('capitulo', '')).strip() or not str(b.get('fala', '')).strip():
+            erros.append(f'bloco {i}: precisa de "capitulo" e "fala"')
+    if erros:
+        return erros, avisos, {}
+    b, f = REGRAS['blocos'], REGRAS['fala_caracteres']
+    total = sum(len(x['fala']) for x in blocos)
+    segundos = round(total / REGRAS['caracteres_por_segundo'])
+    if not b['minimo'] <= len(blocos) <= b['maximo']:
+        erros.append(f"são {len(blocos)} blocos; use de {b['minimo']} a {b['maximo']}")
+    if not f['minimo'] <= total <= f['maximo']:
+        erros.append(f"a fala tem {total} caracteres; use de {f['minimo']} a {f['maximo']}")
+    if segundos > REGRAS['duracao_s']['maximo']:
+        erros.append(f"a fala daria cerca de {segundos} s; o limite é {REGRAS['duracao_s']['maximo']} s")
+    if _simples(blocos[0]['capitulo']) != 'gancho':
+        erros.append('o primeiro bloco precisa ser o "Gancho"')
+    if not any('virada' in _simples(x['capitulo']) for x in blocos[1:-1]):
+        erros.append('falta um bloco de "Virada" no meio da história')
+    if not _cita_destino(blocos[-1]['fala'], destino):
+        erros.append(f'o último bloco precisa citar {destino}')
+    frase = re.split(r'(?<=[.!?])\s', blocos[0]['fala'].strip())[0]
+    if len(frase) > REGRAS['gancho_primeira_frase_max']:
+        avisos.append(f'a primeira frase tem {len(frase)} caracteres; frase curta segura mais')
+    if not blocos[-1]['fala'].strip().endswith('?'):
+        avisos.append('o fecho não termina em pergunta')
+    return erros, avisos, {'blocos': len(blocos), 'caracteres': total, 'segundos_estimados': segundos}
+
+
+def cmd_checar(a):
+    try:
+        roteiro = json.loads(Path(a.roteiro).read_text(encoding='utf-8'))
+    except (OSError, ValueError) as e:
+        print(f'Não consegui ler o roteiro: {e}')
+        return 2
+    erros, avisos, m = checar(roteiro, a.destino)
+    if m:
+        print(f"{m['blocos']} blocos · {m['caracteres']} caracteres · cerca de {m['segundos_estimados']} s")
+    for x in avisos:
+        print(f'aviso: {x}')
+    for x in erros:
+        print(f'erro: {x}')
+    print('Reprovado.' if erros else 'Aprovado.')
+    return 1 if erros else 0
+
+
+def cmd_novo(a):
+    destino = Path(a.arquivo)
+    if destino.exists():
+        print(f'{destino} já existe; nada foi alterado.')
+        return 2
+    destino.parent.mkdir(parents=True, exist_ok=True)
+    shutil.copyfile(RAIZ / 'modelo' / 'roteiro.json', destino)
+    print(f'Criado: {destino}')
+    return 0
+
+
+def main(argv=None):
+    p = argparse.ArgumentParser(prog='rtexv', description='Formato de reel rtex-vigia')
+    s = p.add_subparsers(dest='comando', required=True)
+    c = s.add_parser('checar', help='confere um roteiro.json')
+    c.add_argument('roteiro')
+    c.add_argument('--destino', help=f"site citado no fecho (padrão: {REGRAS['destino_padrao']})")
+    c.set_defaults(func=cmd_checar)
+    n = s.add_parser('novo', help='cria um roteiro a partir do modelo')
+    n.add_argument('arquivo')
+    n.set_defaults(func=cmd_novo)
+    a = p.parse_args(argv)
+    return a.func(a)
+
+
+if __name__ == '__main__':
+    sys.exit(main())

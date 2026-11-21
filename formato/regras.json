@@ -1,0 +1,11 @@
+{
+  "nome": "rtex-vigia",
+  "apelido": "rtexv",
+  "video": {"largura": 1080, "altura": 1920, "proporcao": "9:16", "quadros_por_segundo": 25},
+  "duracao_s": {"alvo": 120, "maximo": 170},
+  "fala_caracteres": {"minimo": 1800, "maximo": 2700},
+  "caracteres_por_segundo": 18.5,
+  "blocos": {"minimo": 7, "maximo": 10},
+  "gancho_primeira_frase_max": 120,
+  "destino_padrao": "inema.club"
+}

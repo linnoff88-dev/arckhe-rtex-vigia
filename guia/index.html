@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>rtex-vigia — o roteiro de reel organizado para segurar a atenção</title>
+<meta name="description" content="Com o rtex-vigia, sua notícia vira um roteiro de reel de cerca de 2 minutos, com gancho, ritmo e fecho. Veja o formato em técnico, visual e roteiro.">
+<link rel="alternate" hreflang="pt-BR" href="https://inematds.github.io/rtex-vigia/guia/">
+<link rel="alternate" hreflang="en" href="https://inematds.github.io/rtex-vigia/guia/en/">
+<link rel="alternate" hreflang="es" href="https://inematds.github.io/rtex-vigia/guia/es/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0c0c10; --bg2:#14141b; --card:#16161e; --line:#272730;
+    --txt:#e9e9ee; --mut:#9a9aa6; --amb:#E2A23B; --amb2:#f0c070; --sky:#38bdf8; --pro:#cbd5e1;
+    color-scheme:dark;
+  }
+  body.light{
+    --bg:#f6f7f9; --bg2:#eceef2; --card:#ffffff; --line:#e1e3ea;
+    --txt:#1a1a22; --mut:#5b5b68; --amb:#b9791d; --amb2:#a16207; --sky:#0369a1; --pro:#b45309;
+    color-scheme:light;
+  }
+  body.light .hero .glow{opacity:.5}
+  body.light pre{background:#0e0e14;color:#d6d6e0}
+  body.light pre .c{color:#8a8a98}
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--txt);font:16px/1.65 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:Sora,sans-serif;line-height:1.15;margin:0}
+  a{color:var(--amb);text-decoration:none}
+  code,pre{font-family:"JetBrains Mono",monospace}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 22px}
+  .mut{color:var(--mut)} .amb{color:var(--amb)}
+  .chip{display:inline-block;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--amb);font-weight:600;font-family:Sora}
+  nav{position:sticky;top:0;z-index:30;backdrop-filter:blur(12px);background:rgba(12,12,16,.78);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;gap:22px;height:60px}
+  nav .brand{display:flex;align-items:center;gap:8px;font-family:Sora;font-weight:800;letter-spacing:-.02em;color:var(--amb)}
+  nav .brand .emoji{font-size:1.25rem}
+  nav .sep{color:var(--mut);opacity:.45}
+  nav .inema{color:var(--sky);font-weight:600;font-size:.88rem;font-family:Sora}
+  nav .inema:hover{filter:brightness(1.15)}
+  nav .pro{color:var(--pro);font-weight:600;font-size:.88rem;font-family:Sora}
+  nav .pro:hover{filter:brightness(1.15)}
+  nav .clubpro{display:inline-flex;align-items:center;gap:6px}
+  nav .links{margin-left:auto;display:flex;align-items:center;gap:20px;font-size:.92rem}
+  nav .links a.sec{color:var(--mut)} nav .links a.sec:hover{color:var(--txt)}
+  .lang{display:inline-flex;gap:2px;font-family:Sora;font-size:.78rem}
+  .lang a{color:var(--mut);padding:.2em .45em;border-radius:6px} .lang a.on{color:var(--amb);background:rgba(226,162,59,.12)}
+  .tgl{background:var(--bg2);border:1px solid var(--line);color:var(--txt);width:38px;height:38px;border-radius:10px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;font-size:1.05rem}
+  .tgl:hover{border-color:var(--amb)}
+  .btn{display:inline-block;background:var(--amb);color:#1a1206;font-weight:600;padding:.6em 1.05em;border-radius:10px;font-family:Sora}
+  .btn.ghost{background:transparent;color:var(--txt);border:1px solid var(--line)}
+  @media(max-width:760px){nav .links a.sec{display:none}}
+  @media(max-width:520px){nav .wrap{gap:8px;padding:8px 14px;height:auto;flex-wrap:wrap} nav .links{gap:8px;margin-left:0;width:100%;justify-content:space-between} nav .btn{padding:.45em .7em;font-size:.82rem} .tgl{width:34px;height:34px}}
+  .hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+  .hero .glow{position:absolute;inset:-40% -20% auto auto;width:70%;height:600px;background:radial-gradient(closest-side,rgba(226,162,59,.22),transparent 70%);pointer-events:none}
+  .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:74px 22px}
+  .hero h1{font-size:clamp(2.2rem,5vw,3.5rem);font-weight:800;letter-spacing:-.025em}
+  .hero p.lead{font-size:1.18rem;color:var(--mut);margin:1.1em 0 1.6em;max-width:34ch}
+  .hero .cta{display:flex;gap:12px;flex-wrap:wrap}
+  .hero figure{margin:0;border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 80px -30px #000}
+  .hero figure img{width:100%;height:auto;display:block}
+  .resumo{padding:38px 0 34px;border-bottom:1px solid var(--line)}
+  .resumo p{font-size:1.12rem;line-height:1.7;max-width:74ch;margin:.55em 0 0}
+  @media(max-width:780px){.hero .wrap{grid-template-columns:1fr;padding:48px 22px}}
+  section{padding:62px 0;border-bottom:1px solid var(--line)}
+  section h2{font-size:clamp(1.5rem,3.4vw,2.1rem);font-weight:800;letter-spacing:-.02em}
+  section .sub{color:var(--mut);margin:.6em 0 2em;max-width:62ch}
+  .grid{display:grid;gap:16px}
+  .g3{grid-template-columns:repeat(3,1fr)} .g4{grid-template-columns:repeat(4,1fr)} .g2{grid-template-columns:repeat(2,1fr)}
+  @media(max-width:820px){.g3,.g4{grid-template-columns:1fr 1fr}}
+  @media(max-width:540px){.g2,.g3,.g4{grid-template-columns:1fr}}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
+  .card h3{font-size:1.05rem;margin-bottom:.4em}
+  .card p{color:var(--mut);font-size:.92rem;margin:0}
+  .num{display:inline-flex;width:30px;height:30px;align-items:center;justify-content:center;border-radius:8px;background:rgba(226,162,59,.14);color:var(--amb);font-family:Sora;font-weight:800;font-size:.9rem;margin-bottom:.7em}
+  .flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:10px}
+  .flow span{background:var(--bg2);border:1px solid var(--line);border-radius:999px;padding:.45em .9em;font-size:.85rem;font-family:Sora;font-weight:600}
+  .flow .arr{color:var(--amb);border:none;background:none;padding:0 .1em}
+  pre{background:#0a0a0e;border:1px solid var(--line);border-radius:12px;padding:16px 18px;overflow:auto;font-size:.86rem;line-height:1.6;color:#d6d6e0}
+  pre .c{color:#6f6f7c} pre .k{color:var(--amb2)} pre .s{color:#9ece6a}
+  .step{display:grid;grid-template-columns:46px minmax(0,1fr);gap:16px;margin-bottom:26px}
+  .step>div,.card{min-width:0}
+  p code,li code,td code{overflow-wrap:anywhere}
+  .step .b{width:46px;height:46px;border-radius:12px;background:var(--amb);color:#1a1206;font-family:Sora;font-weight:800;font-size:1.25rem;display:flex;align-items:center;justify-content:center}
+  .step h3{font-size:1.12rem;margin-bottom:.3em}
+  .step p{color:var(--mut);margin:.2em 0 .7em}
+  .ex{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  @media(max-width:680px){.ex{grid-template-columns:1fr}}
+  .ex figure{margin:0;border-radius:14px;overflow:hidden;border:1px solid var(--line)}
+  .ex figure img{width:100%;height:auto;display:block}
+  .ex figcaption{padding:12px 14px;font-size:.88rem;color:var(--mut);background:var(--card)}
+  .phase{display:flex;gap:14px;padding:16px 0;border-bottom:1px solid var(--line)}
+  .phase:last-child{border:none}
+  .phase .tag{flex:0 0 92px;font-family:Sora;font-weight:800;color:var(--amb)}
+  .phase .d strong{display:block;margin-bottom:.2em}
+  .phase .d span{color:var(--mut);font-size:.92rem}
+  footer{padding:46px 0;text-align:center;color:var(--mut);font-size:.9rem}
+  .pill{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:.3em .8em;font-size:.78rem;color:var(--mut);margin:0 4px}
+  .grade{margin:26px 0 0;border-radius:16px;overflow:hidden;border:1px solid var(--line)} .grade img{width:100%;display:block}
+  .ruim{border-color:rgba(248,113,113,.35)} .bom{border-color:var(--amb)}
+  .tres .card{padding:24px} .tres .ic{font-size:1.7rem;display:block;margin-bottom:.35em} .tres h3{font-size:1.3rem;color:var(--amb);margin-bottom:.6em}
+  .tres ul,.tres ol{margin:0;padding-left:1.15em;color:var(--mut);font-size:.95rem} .tres li{margin:.5em 0} .tres b,.card p b{color:var(--txt)}
+  .card p+p{margin-top:.55em}
+  .frase{margin-top:18px;padding:22px 24px;border-left:3px solid var(--amb);background:var(--bg2);border-radius:0 12px 12px 0} .frase p{font:700 clamp(1.15rem,3vw,1.5rem)/1.3 Sora,sans-serif;margin:.35em 0 0}
+  .exemplo{display:block;color:inherit;padding:0;overflow:hidden} .exemplo:hover{border-color:var(--amb)} .exemplo img{width:100%;display:block} .exemplo h3,.exemplo p,.exemplo span{margin-left:16px;margin-right:16px} .exemplo h3{margin-top:14px} .exemplo span{display:block;margin-top:.5em;margin-bottom:16px;font-weight:600}
+  .pedido{margin-top:18px} .pedido pre{white-space:pre-wrap;overflow-wrap:anywhere;margin:0 0 12px} .pedido button{border:0;cursor:pointer}
+  .num-g b{display:block;font:800 2.2rem/1.1 Sora,sans-serif;color:var(--amb);margin-bottom:.15em}
+  .fim{margin:26px 0 0;font-size:1.08rem}
+  .tres .nota{margin-top:.8em;font-size:.88rem}
+  body.light nav{background:rgba(246,247,249,.9)}
+  section{scroll-margin-top:96px}
+  .mais{display:flex;flex-wrap:wrap;gap:8px 18px;margin:18px 0 0;color:var(--mut);font-weight:500}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <a class="brand" href="#top"><span class="emoji">🎬</span> rtex-vigia</a>
+  <span class="sep">|</span>
+  <span class="clubpro">
+    <a class="inema" href="https://inema.club" target="_blank" rel="noopener">INEMA.CLUB</a>
+    <span class="sep">-</span>
+    <a class="pro" href="https://inema.pro" target="_blank" rel="noopener">PRO</a>
+  </span>
+  <div class="links">
+    <a class="sec" href="#explicado">O ganho</a>
+    <a class="sec" href="#formato">O formato</a>
+    <a class="sec" href="#dia">No seu dia</a>
+    <a class="sec" href="#exemplos">Exemplos</a>
+    <a class="sec" href="#comecar">Como começar</a>
+    <span class="lang"><a class="on" href="./">PT</a><a href="en/">EN</a><a href="es/">ES</a></span>
+    <button class="tgl" id="themeToggle" aria-label="Alternar tema" title="Alternar tema">🌙</button>
+    <a class="btn ghost" href="https://github.com/inematds/rtex-vigia" target="_blank" rel="noopener" title="Arquivos do projeto">GitHub</a>
+  </div>
+</div></nav>
+
+<header class="hero" id="top">
+  <div class="glow"></div>
+  <div class="wrap">
+    <div>
+      <span class="chip">Formato de reel · grátis e sem programar</span>
+      <h1>Com o rtex-vigia, sua notícia vira um roteiro de reel organizado para <span class="amb">segurar a atenção</span></h1>
+      <p class="lead">Você acha um fato forte, conta de qualquer jeito e a pessoa passa direto. Aqui a sua IA ajuda a montar o roteiro. A gravação e a edição ficam com você.</p>
+      <div class="cta">
+        <a class="btn" href="#formato">Ver o formato</a>
+        <a class="btn ghost" href="#comecar">Como começar</a>
+      </div>
+    </div>
+    <figure><img src="assets/banner.jpg" alt="Celular em pé mostrando um reel com manchete em destaque"></figure>
+  </div>
+</header>
+
+<section id="resumo" class="resumo"><div class="wrap">
+  <span class="chip">Em resumo</span>
+  <p>O rtex-vigia, ou rtexv, é um formato de vídeo curto e vertical para contar uma notícia ou descoberta em cerca de 2 minutos. Ele serve para quem cria conteúdo e quer explicar algo importante sem perder a pessoa no meio. Aqui você encontra as regras, um modelo de roteiro e exemplos já publicados. Ele não produz o vídeo sozinho: você copia um pedido para a sua IA, recebe o roteiro e depois grava e edita. Para gravar, use o celular ou um avatar, a versão digital de uma pessoa falando.</p>
+  <figure class="grade"><img src="assets/banner-grade.jpg" alt="Banner do formato, com tamanho, ritmo, manchete, legenda, gancho e fecho" loading="lazy"></figure>
+</div></section>
+
+<section id="explicado"><div class="wrap">
+  <span class="chip">O ganho</span>
+  <h2>Você para de só informar e passa a contar uma história</h2>
+  <p class="sub">O fato pode ser o mesmo. O que muda é a ordem, o ritmo e o motivo para continuar assistindo.</p>
+  <div class="grid g2">
+    <div class="card ruim"><h3>😴 Sem um formato</h3><p>Começa explicando o contexto, a tela fica parada e o vídeo termina em "é isso, pessoal".</p></div>
+    <div class="card bom"><h3>🔥 Com o rtex-vigia</h3><p>Começa pelo fato mais forte, a tela não fica parada e o fim faz uma pergunta de verdade.</p></div>
+  </div>
+  <div class="grid g3" style="margin-top:16px">
+    <div class="card"><h3>🧭 Você sabe o que vem depois</h3><p>Cada vídeo segue a mesma sequência, então você não começa do zero.</p></div>
+    <div class="card"><h3>⏱️ Tamanho certo</h3><p>Cerca de 2 minutos: dá para explicar sem enrolar.</p></div>
+    <div class="card"><h3>✅ Mais confiança</h3><p>Número só entra depois de conferido, e o limite do assunto aparece quando existe.</p></div>
+  </div>
+</div></section>
+
+<section id="formato"><div class="wrap">
+  <span class="chip">O formato</span>
+  <h2>Três partes: técnico, visual e roteiro</h2>
+  <p class="sub">A equipe do INEMA, projeto de ensino gratuito de inteligência artificial, mediu 16 reels feitos neste formato, entre eles os 3 exemplos abaixo. É isto que eles têm em comum.</p>
+  <div class="grid g3 tres">
+    <div class="card">
+      <span class="ic">📐</span><h3>Técnico</h3>
+      <ul>
+        <li><b>Em pé:</b> ocupa a tela inteira do celular, em alta definição.</li>
+        <li><b>Cerca de 2 minutos:</b> de 1min45 a 2min18 nos reels medidos.</li>
+        <li><b>Fala rápida e clara:</b> perto de 200 palavras por minuto. Em ritmo normal, escreva cerca de 300 palavras para ficar em 2 minutos.</li>
+        <li><b>Tela sempre viva:</b> nos nossos vídeos, algo muda a cada 2 ou 3 segundos. Editando sozinho, pode ser mais devagar.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <span class="ic">🎨</span><h3>Visual</h3>
+      <ul>
+        <li><b>Abertura:</b> manchete em cima e quem fala embaixo, em meia tela.</li>
+        <li><b>Depois:</b> a imagem toma a tela e o rosto vai para o canto.</li>
+        <li><b>Legenda:</b> 2 ou 3 palavras por vez, com uma em destaque.</li>
+        <li><b>Imagens:</b> lugares e objetos realistas, e números bem grandes. Nunca gere com IA o rosto de outra pessoa real.</li>
+        <li><b>Fim:</b> o site na tela e uma pergunta.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <span class="ic">✍️</span><h3>Roteiro</h3>
+      <ol>
+        <li><b>Gancho:</b> o fato mais forte, falando com você.</li>
+        <li><b>Prova cedo:</b> um número ou alguém respeitado no assunto.</li>
+        <li><b>História:</b> como começou e o que estava travado.</li>
+        <li><b>Virada:</b> o detalhe que ninguém esperava, explicado com uma comparação simples.</li>
+        <li><b>Pé no chão:</b> o limite do assunto, quando houver.</li>
+        <li><b>Fecho:</b> a moral, o convite e uma pergunta.</li>
+      </ol>
+      <p class="nota">Na fala, essas 6 partes viram de 7 a 10 blocos curtos.</p>
+    </div>
+  </div>
+  <div class="frase"><span class="chip">Um gancho deste formato</span><p>"Se a internet cair agora, o que sobra no seu computador?"</p></div>
+  <p class="mais"><a href="https://github.com/inematds/rtex-vigia/blob/main/formato/FORMATO.md" target="_blank" rel="noopener">Ler as regras completas no GitHub, o site onde ficam os arquivos do projeto (texto mais técnico) ↗</a> <a href="https://github.com/inematds/rtex-vigia/blob/main/modelo/roteiro.md" target="_blank" rel="noopener">Ver o modelo de roteiro no GitHub ↗</a></p>
+</div></section>
+
+<section id="dia"><div class="wrap">
+  <span class="chip">No seu dia</span>
+  <h2>Como isso muda o seu dia</h2>
+  <p class="sub">Três situações comuns de quem cria conteúdo.</p>
+  <div class="grid g3">
+    <div class="card"><h3>📰 Saiu uma notícia forte</h3><p><b>Hoje:</b> você grava comentando e o vídeo fica solto.</p><p><b>Com o formato:</b> você encaixa o fato nas seis partes do roteiro.</p></div>
+    <div class="card"><h3>🧪 O assunto é difícil</h3><p><b>Hoje:</b> a explicação fica longa e técnica.</p><p><b>Com o formato:</b> uma comparação simples resolve, como dizer que um vírus só entra na bactéria certa, igual a uma chave na fechadura.</p></div>
+    <div class="card"><h3>💬 Ninguém comenta</h3><p><b>Hoje:</b> o vídeo só acaba.</p><p><b>Com o formato:</b> o fim faz uma pergunta sobre a vida de quem assistiu.</p></div>
+  </div>
+</div></section>
+
+<!-- VIDEO: entra o explicavideo do projeto quando publicado -->
+
+<section id="exemplos"><div class="wrap">
+  <span class="chip">Exemplos</span>
+  <h2>Veja o formato funcionando</h2>
+  <p class="sub">Três reels já publicados sobre inteligência artificial na saúde, no trabalho e em casa. Até agora usamos o formato nesses temas. Para outro assunto, troque o fato e mantenha a sequência. Quem fala nestes vídeos é o avatar de Nei Maldaner, do INEMA. Toque para assistir no YouTube.</p>
+  <div class="grid g3">
+    <a class="card exemplo" href="https://www.youtube.com/shorts/kqNiaEvGtTQ" target="_blank" rel="noopener"><img src="assets/ex-cirurgia-raio-x.jpg" alt="Três cenas do reel sobre cirurgia com óculos de IA" loading="lazy"><h3>Cirurgião com visão de raio-x</h3><p>Saúde e tecnologia · 2min12</p><span class="amb">Assistir ↗</span></a>
+    <a class="card exemplo" href="https://www.youtube.com/shorts/r5FoW7NjTqE" target="_blank" rel="noopener"><img src="assets/ex-so-tres-ferramentas.jpg" alt="Três cenas do reel sobre escolher poucas ferramentas de IA" loading="lazy"><h3>Só 3 ferramentas de IA</h3><p>Produtividade · 1min52</p><span class="amb">Assistir ↗</span></a>
+    <a class="card exemplo" href="https://www.youtube.com/shorts/KHcn1nvT_g0" target="_blank" rel="noopener"><img src="assets/ex-ia-sem-internet.jpg" alt="Três cenas do reel sobre IA sem internet" loading="lazy"><h3>IA mesmo sem internet</h3><p>Tecnologia no dia a dia · 2min18</p><span class="amb">Assistir ↗</span></a>
+  </div>
+  <p class="mais">Leia os roteiros no GitHub: <a href="https://github.com/inematds/rtex-vigia/blob/main/exemplos/cirurgia-raio-x/roteiro.md" target="_blank" rel="noopener">raio-x ↗</a> <a href="https://github.com/inematds/rtex-vigia/blob/main/exemplos/so-tres-ferramentas/roteiro.md" target="_blank" rel="noopener">ferramentas ↗</a> <a href="https://github.com/inematds/rtex-vigia/blob/main/exemplos/ia-sem-internet/roteiro.md" target="_blank" rel="noopener">sem internet ↗</a></p>
+</div></section>
+
+<section id="comecar"><div class="wrap">
+  <span class="chip">Como começar</span>
+  <h2>Sua IA monta o primeiro roteiro com você</h2>
+  <p class="sub">Você não precisa instalar nada nem saber programar. A IA entrega o texto, e o vídeo você grava e edita.</p>
+  <div class="grid g4">
+    <div class="card"><span class="num">1</span><h3>Abra sua IA</h3><p>Pode ser o Claude, o ChatGPT ou outra que consiga ler páginas da internet.</p></div>
+    <div class="card"><span class="num">2</span><h3>Cole o pedido</h3><p>Copie o texto abaixo, que já traz as regras, e responda às perguntas dela.</p></div>
+    <div class="card"><span class="num">3</span><h3>Revise</h3><p>Abra as fontes, confira os fatos e ajuste para o seu jeito de falar.</p></div>
+    <div class="card"><span class="num">4</span><h3>Grave e edite</h3><p>Grave bloco por bloco ou use um aplicativo de teleprompter, que rola o texto na tela. Depois monte as telas no seu editor.</p></div>
+  </div>
+  <div class="pedido">
+    <pre id="pedidoTxt">Quero um roteiro de reel no formato rtex-vigia.
+
+Regras do formato:
+- Cerca de 2 minutos no meu ritmo de fala, em 7 a 10 blocos curtos.
+- Sequência: gancho com o fato mais forte, falando com "você"; uma prova logo no início; a história, com como começou e o que estava travado; a virada, explicada com uma comparação simples; o limite do assunto, quando houver; e o fecho, com uma moral, o convite para o meu site ou perfil e uma pergunta de verdade.
+- Visual: manchete curta, legenda de 2 ou 3 palavras por vez, imagens realistas e números grandes. Nas imagens, nunca gere com IA o rosto de outra pessoa real.
+
+Se conseguir abrir, veja estes exemplos. Se não conseguir, me avise e siga só as regras acima:
+https://github.com/inematds/rtex-vigia/blob/main/exemplos/cirurgia-raio-x/roteiro.md
+https://github.com/inematds/rtex-vigia/blob/main/exemplos/so-tres-ferramentas/roteiro.md
+https://github.com/inematds/rtex-vigia/blob/main/exemplos/ia-sem-internet/roteiro.md
+
+Antes de escrever, me pergunte e espere as respostas:
+1. Qual é o assunto?
+2. Quais fatos eu já apurei e de onde vieram?
+3. Para quem é o vídeo?
+4. Para qual site ou perfil quero levar as pessoas?
+5. Vou falar em ritmo normal ou acelerado?
+6. Tenho um texto meu ou a transcrição de um áudio para você copiar meu jeito de falar?
+
+Depois escreva o roteiro com palavras próprias e na minha voz, em texto corrido, bloco por bloco, e diga o tempo estimado de leitura.
+Em cada bloco, liste as telas: a manchete, o número em destaque, se houver, e uma imagem que eu possa usar legalmente, dizendo onde buscar.
+Confira números e datas em fontes confiáveis e me mostre os links. Se não conseguir pesquisar na internet, avise e não invente fontes nem links. O que eu apurei e não estiver na internet, mantenha e marque como "apuração própria" para eu confirmar. Se algo for contrariado por uma fonte, me avise antes de mudar.
+Não publique nada e não altere nenhum arquivo sem o meu sim.</pre>
+    <button class="btn" id="copiarPedido" data-ok="Copiado ✓" data-txt="Copiar o pedido" data-erro="Selecione o texto e copie">Copiar o pedido</button>
+  </div>
+  <div class="card" style="margin-top:16px"><h3>📱 Vai editar sozinho no celular? Comece simples</h3><p><b>Editor:</b> use um aplicativo com legenda automática, como CapCut ou InShot, e deixe 2 ou 3 palavras por vez.</p><p><b>Gravação:</b> fale em tela cheia. A meia tela e o rosto no canto são opcionais. Se quiser fazer, procure no editor o recurso de sobreposição de vídeo.</p><p><b>Imagens:</b> use fotos suas, bancos de imagens gratuitos ou imagens geradas por IA, sem rosto de pessoa real. Foto de jornal só com permissão.</p><p><b>Ritmo:</b> nossos vídeos trocam algo na tela a cada 2 ou 3 segundos porque são montados por um sistema automático. Sozinho, comece com uma imagem por ideia importante e mantenha o gancho, a virada e o fecho.</p></div>
+  <div class="card" style="margin-top:16px"><h3>🛠️ É técnico?</h3><p>Quem quiser conferir roteiros automaticamente encontra as instruções na <a href="https://github.com/inematds/rtex-vigia#instalação-técnica" target="_blank" rel="noopener">página técnica do projeto</a>.</p></div>
+</div></section>
+
+<section id="prova"><div class="wrap">
+  <span class="chip">Como medimos</span>
+  <h2>As medidas do formato</h2>
+  <p class="sub">Estes números mostram como 16 reels foram montados. Não medem audiência nem tempo assistido.</p>
+  <div class="grid g3">
+    <div class="card num-g"><b>16</b><p>reels medidos</p></div>
+    <div class="card num-g"><b>2min01</b><p>de duração típica</p></div>
+    <div class="card num-g"><b>2,7 s</b><p>entre uma mudança e outra na tela</p></div>
+  </div>
+</div></section>
+
+<section id="faq"><div class="wrap">
+  <span class="chip">Perguntas</span>
+  <h2>Antes de você testar</h2>
+  <div class="grid g2" style="margin-top:22px">
+    <div class="card"><h3>Isso garante visualizações?</h3><p>Não. O formato organiza o vídeo para segurar a atenção, mas o resultado depende do assunto, do público e da plataforma.</p></div>
+    <div class="card"><h3>Preciso programar?</h3><p>Não. O pedido pronto faz a sua IA preparar o roteiro.</p></div>
+    <div class="card"><h3>Preciso de avatar?</h3><p>Não. Você pode gravar com o celular. Manchetes, legendas e imagens entram depois, na edição.</p></div>
+    <div class="card"><h3>Quanto custa?</h3><p>O formato é gratuito. Você só paga se usar alguma ferramenta paga para gravar ou editar.</p></div>
+  </div>
+  <p class="fim">Qual notícia você contaria primeiro neste formato? Aprenda mais de graça no <a href="https://inema.club" target="_blank" rel="noopener">inema.club</a>, direto na internet.</p>
+</div></section>
+
+<footer>
+  <div class="wrap">
+    <div class="pill">Técnico</div><div class="pill">Visual</div><div class="pill">Roteiro</div>
+    <p style="margin-top:18px">rtex-vigia · formato de reel ·
+      <a href="https://github.com/inematds/rtex-vigia">inematds/rtex-vigia</a> ·
+      <a href="https://inema.club">INEMA.CLUB</a></p>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var KEY='rtex-vigia-theme', b=document.body, t=document.getElementById('themeToggle');
+    try{ if(localStorage.getItem(KEY)==='light'){ b.classList.add('light'); t.textContent='☀️'; } }catch(e){}
+    t.addEventListener('click',function(){
+      var light=b.classList.toggle('light'); t.textContent=light?'☀️':'🌙';
+      try{ localStorage.setItem(KEY, light?'light':'dark'); }catch(e){}
+    });
+    var c=document.getElementById('copiarPedido'), p=document.getElementById('pedidoTxt');
+    c.addEventListener('click',function(){
+      navigator.clipboard.writeText(p.textContent).then(function(){
+        c.textContent=c.dataset.ok; setTimeout(function(){ c.textContent=c.dataset.txt; },2000);
+      }).catch(function(){ c.textContent=c.dataset.erro; });
+    });
+  })();
+</script>
+</body>
+</html>
