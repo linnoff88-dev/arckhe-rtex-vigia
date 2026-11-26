@@ -16,7 +16,7 @@ Lá dentro, você escolhe o que guardar. A Wikipédia inteira, livros, guias de 
 
 ## A virada: O que todo mundo ignorou
 
-Só que biblioteca offline já existia. O que fez esse projeto explodir foi a inteligência artificial que vem dentro. Ela roda no seu computador. Não manda a sua pergunta para servidor nenhum. E o projeto não espiona: não conta para ninguém o que você faz.
+Só que biblioteca offline já existia. O que fez esse projeto explodir foi a inteligência artificial que vem dentro. Ela roda no seu computador. Nêo manda a sua pergunta para servidor nenhum. E o projeto nêo espiona: nêo conta para ninguém o que você faz.
 
 ## Como funciona: Ela lê a sua biblioteca
 
@@ -24,16 +24,16 @@ Você pergunta como numa conversa. Ela procura a resposta na biblioteca que voc�
 
 ## O crescimento: Primeiro lugar num dia
 
-Os programadores viram primeiro. Em março de dois mil e vinte e seis, num único dia, o projeto ganhou mais de duas mil estrelas e chegou ao primeiro lugar entre os projetos em alta do GitHub. Hoje são mais de quarenta e três mil.
+Os programadores viram primeiro. Em março de dois mil e vinte e seis, num único dia, o projeto ganhou mais de duas mil estrelas e chegou ao primeiro lugar entre os projetos em alta do GitHub. Hoje sêo mais de quarenta e três mil.
 
 ## O detalhe: O que quase ninguém mostra
 
-Agora, o detalhe prometido. Sem a inteligência artificial, ele roda em quase qualquer computador. Com ela, você precisa de uma máquina forte, com bastante memória e uma placa de vídeo boa. E ele foi feito para Linux. No Windows, só por um caminho da comunidade, não oficial.
+Agora, o detalhe prometido. Sem a inteligência artificial, ele roda em quase qualquer computador. Com ela, você precisa de uma máquina forte, com bastante memória e uma placa de vídeo boa. E ele foi feito para Linux. No Windows, só por um caminho da comunidade, nêo oficial.
 
-## A lição: Pedir licença para saber
+## A liçêo: Pedir licença para saber
 
-E não precisa de apocalipse para isso servir. Uma queda de luz longa, uma enchente, uma viagem para o meio do mato. Na nuvem, você pede licença para saber. No seu disco, você só pergunta.
+E nêo precisa de apocalipse para isso servir. Uma queda de luz longa, uma enchente, uma viagem para o meio do mato. Na nuvem, você pede licença para saber. No seu disco, você só pergunta.
 
 ## Fecho: Qual resposta faria falta?
 
-O Project Nomad mostra que a inteligência artificial pode morar dentro da sua casa. No inema ponto club você aprende inteligência artificial de graça, direto na internet, enquanto ela está aí. E me conta: se a internet caísse amanhã, qual resposta você mais ia sentir falta de ter?
+O Project Nomad mostra que a inteligência artificial pode morar dentro da sua casa. No inema ponto club você aprende inteligência artificial de graça, direto na internet, enquanto ela está aí. E me conta: se a internet caísse amanhê, qual resposta você mais ia sentir falta de ter?

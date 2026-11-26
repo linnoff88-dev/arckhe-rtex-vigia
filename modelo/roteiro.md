@@ -16,17 +16,17 @@ O que doía antes, com um exemplo que a pessoa reconhece.
 
 A mudança contraintuitiva que explica por que isso importa.
 
-## Como funciona: Em uma comparação
+## Como funciona: Em uma comparaçêo
 
-Explique com uma comparação do dia a dia.
+Explique com uma comparaçêo do dia a dia.
 
 ## O número: A prova
 
 O número mais forte, já conferido em fonte confiável.
 
-## O cuidado: Pé no chão
+## O cuidado: Pé no chêo
 
-O que ainda não foi provado ou o limite real.
+O que ainda nêo foi provado ou o limite real.
 
 ## Fecho: A moral e a conversa
 

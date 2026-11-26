@@ -1,4 +1,4 @@
 # FALHAS — rtex-vigia
 
-| data | o que quebrou | menor correção | prompt \| infra |
+| data | o que quebrou | menor correçêo | prompt \| infra |
 |---|---|---|---|

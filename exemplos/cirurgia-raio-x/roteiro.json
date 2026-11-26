@@ -1,27 +1,27 @@
 {
-  "titulo": "Cirurgião com visão de raio-x: óculos de IA com erro de 0,75 mm já têm aval da FDA",
+  "titulo": "Cirurgiêo com visêo de raio-x: óculos de IA com erro de 0,75 mm já têm aval da FDA",
   "youtube": "https://www.youtube.com/shorts/kqNiaEvGtTQ",
   "duracao_s": 132,
   "blocos": [
     {
       "capitulo": "Gancho",
-      "titulo": "Cirurgia com visão de raio-x",
-      "fala": "Tem cirurgião operando o cérebro enxergando através do crânio do paciente, como se tivesse visão de raio-x. Não é filme. Já tem aprovação da FDA, a agência que libera aparelhos médicos nos Estados Unidos. E no fim eu te mostro a lição disso para o seu trabalho."
+      "titulo": "Cirurgia com visêo de raio-x",
+      "fala": "Tem cirurgiêo operando o cérebro enxergando através do crânio do paciente, como se tivesse visêo de raio-x. Nêo é filme. Já tem aprovaçêo da FDA, a agência que libera aparelhos médicos nos Estados Unidos. E no fim eu te mostro a liçêo disso para o seu trabalho."
     },
     {
       "capitulo": "A origem",
       "titulo": "Dois médicos de Nova York",
-      "fala": "A empresa é a Medivis, de Nova York, criada em dois mil e dezesseis por dois médicos residentes: um neurocirurgião e um radiologista. Um opera. O outro lê os exames. E os dois viam todo dia o mesmo problema."
+      "fala": "A empresa é a Medivis, de Nova York, criada em dois mil e dezesseis por dois médicos residentes: um neurocirurgiêo e um radiologista. Um opera. O outro lê os exames. E os dois viam todo dia o mesmo problema."
     },
     {
       "capitulo": "O problema",
       "titulo": "Operar de memória",
-      "fala": "Até hoje a tomografia fica numa tela ao lado da mesa. O cirurgião olha a tela, guarda na cabeça onde está o alvo, vira de volta para o paciente e opera de memória. Olha, vira, decora, opera."
+      "fala": "Até hoje a tomografia fica numa tela ao lado da mesa. O cirurgiêo olha a tela, guarda na cabeça onde está o alvo, vira de volta para o paciente e opera de memória. Olha, vira, decora, opera."
     },
     {
       "capitulo": "O erro",
       "titulo": "Um em cada três",
-      "fala": "E é nessa virada de cabeça que mora o erro. Um exemplo: o dreno que se coloca no cérebro para tirar o excesso de líquido. Feito à mão, sem guia, ele fica fora do ponto ideal em quase um caso a cada três."
+      "fala": "E é nessa virada de cabeça que mora o erro. Um exemplo: o dreno que se coloca no cérebro para tirar o excesso de líquido. Feito à mêo, sem guia, ele fica fora do ponto ideal em quase um caso a cada três."
     },
     {
       "capitulo": "A virada",
@@ -31,22 +31,22 @@
     {
       "capitulo": "Como funciona",
       "titulo": "Um mapa por dentro",
-      "fala": "Antes da cirurgia, a inteligência artificial separa o exame em camadas, em três dimensões: osso, cérebro, vasos. Na sala, o cirurgião calibra os óculos tocando pontos do paciente. Pronto: o mapa de dentro aparece por cima, em tempo real, e acompanha cada movimento."
+      "fala": "Antes da cirurgia, a inteligência artificial separa o exame em camadas, em três dimensões: osso, cérebro, vasos. Na sala, o cirurgiêo calibra os óculos tocando pontos do paciente. Pronto: o mapa de dentro aparece por cima, em tempo real, e acompanha cada movimento."
     },
     {
-      "capitulo": "A precisão",
+      "capitulo": "A precisêo",
       "titulo": "Menos de um milímetro",
-      "fala": "E a precisão? Em dois mil e vinte e três, um estudo testou o sistema na norma de precisão que a própria FDA reconhece. Duzentas e oitenta e oito medições. Erro médio: zero vírgula setenta e cinco milímetro. Mais fino que o arame de um clipe de papel."
+      "fala": "E a precisêo? Em dois mil e vinte e três, um estudo testou o sistema na norma de precisêo que a própria FDA reconhece. Duzentas e oitenta e oito medições. Erro médio: zero vírgula setenta e cinco milímetro. Mais fino que o arame de um clipe de papel."
     },
     {
       "capitulo": "O crescimento",
       "titulo": "Da coluna ao crânio",
-      "fala": "No mesmo ano, a revista Time pôs o sistema entre as melhores invenções do ano. Em dois mil e vinte e cinco veio a aprovação para coluna e, em dezembro, para crânio: segundo a empresa, o primeiro sistema de realidade aumentada liberado para guiar cirurgia dentro da cabeça. O próximo alvo, ainda sem aprovação, é a próstata."
+      "fala": "No mesmo ano, a revista Time pôs o sistema entre as melhores invenções do ano. Em dois mil e vinte e cinco veio a aprovaçêo para coluna e, em dezembro, para crânio: segundo a empresa, o primeiro sistema de realidade aumentada liberado para guiar cirurgia dentro da cabeça. O próximo alvo, ainda sem aprovaçêo, é a próstata."
     },
     {
-      "capitulo": "A lição",
+      "capitulo": "A liçêo",
       "titulo": "Tirar o obstáculo",
-      "fala": "E aqui está o que quase todo mundo ignora. A Medivis não tentou substituir o cirurgião. Ela tirou um obstáculo do caminho dele: aquela virada de cabeça. A melhor tecnologia nem sempre faz o seu trabalho. Ela tira o que te atrapalha de fazer bem feito."
+      "fala": "E aqui está o que quase todo mundo ignora. A Medivis nêo tentou substituir o cirurgiêo. Ela tirou um obstáculo do caminho dele: aquela virada de cabeça. A melhor tecnologia nem sempre faz o seu trabalho. Ela tira o que te atrapalha de fazer bem feito."
     },
     {
       "capitulo": "Fecho",
