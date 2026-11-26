@@ -36,4 +36,4 @@ E nêo precisa de apocalipse para isso servir. Uma queda de luz longa, uma enche
 
 ## Fecho: Qual resposta faria falta?
 
-O Project Nomad mostra que a inteligência artificial pode morar dentro da sua casa. No inema ponto club você aprende inteligência artificial de graça, direto na internet, enquanto ela está aí. E me conta: se a internet caísse amanhê, qual resposta você mais ia sentir falta de ter?
+O Project Nomad mostra que a inteligência artificial pode morar dentro da sua casa. No ARCKHÉ ponto club você aprende inteligência artificial de graça, direto na internet, enquanto ela está aí. E me conta: se a internet caísse amanhê, qual resposta você mais ia sentir falta de ter?

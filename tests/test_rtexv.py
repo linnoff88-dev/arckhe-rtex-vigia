@@ -45,7 +45,7 @@ class Checar(unittest.TestCase):
 
     def test_destino_falado_por_extenso(self):
         r = base()
-        r['blocos'][-1]['fala'] = 'No inema ponto club você aprende de graça. O que acha?'
+        r['blocos'][-1]['fala'] = 'No ARCKHÉ ponto club você aprende de graça. O que acha?'
         self.assertFalse(any('citar' in e for e in rtexv.checar(r)[0]))
 
     def test_roteiro_quebrado_nao_estoura(self):

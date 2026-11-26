@@ -40,4 +40,4 @@ E aqui está o que quase todo mundo ignora. A Medivis nêo tentou substituir o c
 
 ## Fecho: Qual é a sua tela ao lado?
 
-Pensa no seu trabalho: qual é a sua tela ao lado, que te obriga a decorar e voltar? É aí que a inteligência artificial entra. No inema.club você aprende inteligência artificial de graça. Me conta aqui: que obstáculo você tiraria do caminho?
+Pensa no seu trabalho: qual é a sua tela ao lado, que te obriga a decorar e voltar? É aí que a inteligência artificial entra. No ARCKHÉ AI você aprende inteligência artificial de graça. Me conta aqui: que obstáculo você tiraria do caminho?

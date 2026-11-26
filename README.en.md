@@ -1,6 +1,6 @@
 # rtex-vigia
 
-[![rtex-vigia](guia/assets/banner-en.jpg)](https://inematds.github.io/rtex-vigia/guia/en/)
+[![rtex-vigia](guia/assets/banner-en.jpg)](https://linnoff88-dev.github.io/arckhe-/guia/en/)
 
 **🇧🇷 [Português](README.md) · 🇺🇸 [English](README.en.md) · 🇪🇸 [Español](README.es.md)**
 
@@ -10,7 +10,7 @@ rtex-vigia, or rtexv, is a short vertical video format for telling a news story 
 
 ## 📖 User guide
 
-Full guide: **https://inematds.github.io/rtex-vigia/guia/en/**
+Full guide: **https://linnoff88-dev.github.io/arckhe-/guia/en/**
 
 ## Start by asking your AI
 
@@ -25,9 +25,9 @@ Format rules:
 - Visuals: a short headline, captions with 2 or 3 words at a time, realistic images, and large numbers. Never use AI to generate images of another real person’s face.
 
 If you can open them, take a look at these examples. If you can’t, let me know and follow only the rules above:
-https://github.com/inematds/rtex-vigia/blob/main/exemplos/cirurgia-raio-x/roteiro.md
-https://github.com/inematds/rtex-vigia/blob/main/exemplos/so-tres-ferramentas/roteiro.md
-https://github.com/inematds/rtex-vigia/blob/main/exemplos/ia-sem-internet/roteiro.md
+https://github.com/linnoff88-dev/rtex-vigia/blob/main/exemplos/cirurgia-raio-x/roteiro.md
+https://github.com/linnoff88-dev/rtex-vigia/blob/main/exemplos/so-tres-ferramentas/roteiro.md
+https://github.com/linnoff88-dev/rtex-vigia/blob/main/exemplos/ia-sem-internet/roteiro.md
 
 Before writing, ask me these questions and wait for my answers:
 1. What’s the topic?
@@ -74,16 +74,16 @@ Details and measurements: [format/FORMATO.md](formato/FORMATO.md) (in Portuguese
 | 3 | Write the blocks | Fill in the file following `formato/FORMATO.md` | 🧠 |
 | 4 | Verify the facts | Check each number and date against a reliable source | 🧠 |
 | 5 | Check the format | `bin/rtexv checar roteiros/meu-tema.json` | ⚙️ |
-| 6 | Record | Camera or avatar. At INEMA, [explicavideos](https://github.com/inematds/explicavideos) handles the avatar | 🧠 |
-| 7 | Assemble | At INEMA, explicavideos in viral profile, in 9:16 | 🤖 |
-| 8 | Publish | At INEMA, the [yt-pub-x3](https://github.com/inematds/yt-pub-x3) queue | ⚙️ |
+| 6 | Record | Camera or avatar. At ARCKHÉ, [explicavideos](https://github.com/linnoff88-dev/explicavideos) handles the avatar | 🧠 |
+| 7 | Assemble | At ARCKHÉ, explicavideos in viral profile, in 9:16 | 🤖 |
+| 8 | Publish | At ARCKHÉ, the [yt-pub-x3](https://github.com/linnoff88-dev/yt-pub-x3) queue | ⚙️ |
 
 ## Technical installation
 
 Requires Python 3.9 or newer, with no other dependencies.
 
 ```bash
-git clone https://github.com/inematds/rtex-vigia.git
+git clone https://github.com/linnoff88-dev/rtex-vigia.git
 cd rtex-vigia
 bin/rtexv novo roteiros/meu-tema.json
 bin/rtexv checar roteiros/meu-tema.json

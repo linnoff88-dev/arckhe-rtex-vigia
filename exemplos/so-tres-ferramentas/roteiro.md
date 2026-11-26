@@ -36,4 +36,4 @@ Entêo faz assim. Uma ferramenta pra escrever. Uma pra criar imagem. Uma pra aut
 
 ## Fecho: Quem domina três sai na frente
 
-Quem coleciona ferramenta vive recomeçando. Quem domina três sai na frente. No inema.club você aprende inteligência artificial de graça. E me conta aqui embaixo: em quantas IAs você tem conta, e quantas usa de verdade?
+Quem coleciona ferramenta vive recomeçando. Quem domina três sai na frente. No ARCKHÉ AI você aprende inteligência artificial de graça. E me conta aqui embaixo: em quantas IAs você tem conta, e quantas usa de verdade?
